@@ -1,0 +1,82 @@
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  min-width: 100px;
+  background: white;
+  z-index: 1;
+}
+.product__rating {
+  display: flex;
+}
+.product > img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+.product > a button {
+  background-color: #ff6600;
+  color: white;
+  border-radius: 20px;
+  width: 258px;
+  height: 40px;
+  cursor: pointer;
+}
+.product__price {
+  margin-top: 5px;
+}
+.product__info {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  margin-bottom: 15px;
+}
+.product__info .product__image {
+  flex: 20%;
+  padding: 20px;
+}
+
+.product__info .product__image > img {
+  width: 416px;
+  height: 416px;
+}
+
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+  .on-time-delivery-g {
+    display: none;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  * {
+    align-items: center;
+    
+  }
+  .product > img {
+    max-height: 360px;
+    width: 360px;
+    margin-bottom: 15px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .on-time-delivery-g {
+    display: none;
+  }
+  .product__info .addtobox {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+}
